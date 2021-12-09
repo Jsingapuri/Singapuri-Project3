@@ -79,7 +79,7 @@ const SearchPokemon = () => {
 
   return (
     <>
-      <Jumbotron fluid className="text-light bg-dark">
+      <Jumbotron fluid className="text-warning bg-danger">
         <Container>
           <h1>Search The PokéDex!</h1>
           <Form onSubmit={handleFormSubmit}>
@@ -95,7 +95,7 @@ const SearchPokemon = () => {
                 />
               </Col>
               <Col xs={12} md={4}>
-                <Button type="submit" variant="success" size="lg">
+                <Button type="submit" variant="primary" size="lg">
                   Catch Them All
                 </Button>
               </Col>
@@ -111,7 +111,7 @@ const SearchPokemon = () => {
             : "Search for a pokemon to begin"}
         </h2>
         <CardColumns>
-          <Card key={searchedPokemon.id} border="dark">
+          <Card key={searchedPokemon.id} border="danger">
             {searchedPokemon.name ? (
               <Card.Img
                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${searchedPokemon.id}.png`}
